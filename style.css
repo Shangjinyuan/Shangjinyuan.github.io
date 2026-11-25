@@ -1,0 +1,116 @@
+:root {
+  color-scheme: light;
+  --paper: #f7f5ee;
+  --ink: #242b39;
+  --text: #414b5b;
+  --accent: #344b9f;
+  --rule: #d3d3cb;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 38px 32px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.home {
+  width: min(850px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  gap: clamp(38px, 7vw, 90px);
+  border-block: 1px solid var(--rule);
+  padding-block: clamp(38px, 6vw, 70px);
+}
+
+h1 { margin: 0; font-weight: 600; }
+
+.greeting {
+  display: block;
+  color: var(--text);
+  font-size: 17px;
+  letter-spacing: .12em;
+}
+
+.name {
+  display: block;
+  margin-top: 7px;
+  font: 400 clamp(78px, 12vw, 140px)/.93 Georgia, "Times New Roman", serif;
+  letter-spacing: -.07em;
+}
+
+.period { color: var(--accent); }
+
+.intro p {
+  max-width: 22em;
+  margin: 25px 0 24px;
+  color: var(--text);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.github {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 15px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.github:hover { background: var(--accent); color: #fff; }
+.github:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+.monogram {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #e7b876;
+  color: #38304a;
+  font: italic 400 clamp(86px, 13vw, 152px)/1 Georgia, "Times New Roman", serif;
+}
+
+.monogram::before,
+.monogram::after {
+  position: absolute;
+  z-index: -1;
+  inset: 12% 17%;
+  border: 1px solid #6c51335c;
+  border-radius: 50%;
+  transform: rotate(39deg);
+  content: "";
+}
+
+.monogram::after { transform: rotate(-39deg); }
+
+.monogram span { transform: translateX(-5%); }
+
+@media (max-width: 600px) {
+  body { padding: 28px 24px; }
+  .home {
+    max-width: 420px;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    gap: 28px;
+    padding-block: 32px;
+  }
+  .name { font-size: clamp(76px, 17vw, 106px); }
+  .intro p { margin-block: 18px 20px; }
+  .monogram { width: clamp(95px, 30vw, 140px); font-size: clamp(47px, 14vw, 66px); }
+}
