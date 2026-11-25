@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="记录大学生活、数学与编程的中文博客。">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>个人博客 · 未完稿</title>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/archive.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./"><span class="mark" aria-hidden="true">未</span>未完稿</a>
+    <nav aria-label="站点导航">
+      <a href="./" aria-current="page">首页</a>
+      <a href="./#archive">文章</a>
+      <a href="./about.html">关于</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="featured">
+      <div class="hero-copy">
+        <p class="kicker"><span>校园随笔</span><time datetime="2026-11-25">2026.11.25</time></p>
+        <h1 id="featured">在安大的<br>这半个学期</h1>
+        <p class="hero-summary">从刷高数期中卷，到第一次和同学琢磨一个研究问题。回头看，开学时列下的计划只完成了一部分，有些真正想做的事却渐渐清楚了。</p>
+        <a class="read-link" href="posts/first-half-semester.html">阅读随笔 <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="notebook">
+          <div class="cover"></div>
+          <div class="sheet left-sheet"></div>
+          <div class="sheet right-sheet"><span class="curve"></span></div>
+        </div>
+      </div>
+    </section>
+    <section class="archive" id="archive" aria-labelledby="archive-title">
+      <div class="archive-header">
+        <h2 id="archive-title">文章归档</h2>
+        <div class="filters" role="group" aria-label="按主题筛选" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" data-filter="campus" aria-pressed="false">随笔</button>
+          <button type="button" data-filter="math" aria-pressed="false">数学</button>
+          <button type="button" data-filter="code" aria-pressed="false">编程</button>
+        </div>
+      </div>
+      <p class="sr-only" id="filter-status" role="status"></p>
+      <ul class="entries">
+        <li data-category="campus">
+          <a class="entry" href="posts/first-half-semester.html">
+            <div class="kicker"><span>随笔</span><time datetime="2026-11-25">2026.11.25</time></div>
+            <div><h3>在安大的这半个学期</h3><p>高数期中、第一次试着复现论文，还有没读完的书。</p></div>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li data-category="math">
+          <a class="entry" href="posts/volumes-of-revolution.html">
+            <div class="kicker"><span>数学</span><time datetime="2026-11-25">2026.11.25</time></div>
+            <div><h3>旋转体体积，先看怎么切</h3><p>同一片区域绕 y 轴旋转，圆环法和圆柱壳法怎么选？</p></div>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li data-category="code">
+          <a class="entry" href="posts/c-pointers.html">
+            <div class="kicker"><span>编程</span><time datetime="2026-11-25">2026.11.25</time></div>
+            <div><h3>C 语言的指针传参到底传了什么？</h3><p>用两个短函数分清传指针、改变量和改指针本身。</p></div>
+            <span class="entry-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer wrap">
+    <span>未完稿</span>
+    <a href="https://github.com/Shangjinyuan/Shangjinyuan.github.io">GitHub ↗</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="同一片区域绕 y 轴旋转，圆环法和圆柱壳法怎么选？">
+  <meta name="theme-color" content="#f5f2e9">
+  <title>旋转体体积，先看怎么切 · 未完稿</title>
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="../"><span class="mark" aria-hidden="true">未</span>未完稿</a>
+    <nav aria-label="站点导航">
+      <a href="../">首页</a>
+      <a href="../#archive">文章</a>
+      <a href="../about.html">关于</a>
+    </nav>
+  </header>
+  <main id="main" class="wrap reading-page">
+    <article class="prose">
+      <a class="back-link" href="../#archive">← 文章归档</a>
+      <header class="article-heading">
+        <p class="kicker"><span>数学</span><time datetime="2026-11-25">2026.11.25</time></p>
+        <h1>旋转体体积，先看怎么切</h1>
+        <p class="dek">同一片区域绕 y 轴旋转，圆环法和圆柱壳法怎么选？</p>
+      </header>
+      <p>设区域由 <var>y</var> = <var>x</var>² 和 <var>y</var> = <var>x</var> 围成，绕 <var>y</var> 轴旋转。两条曲线在 (0, 0) 和 (1, 1) 相交。画出区域以后，可以试着切一条竖的和一条横的，分别看它们绕轴一圈得到什么。</p>
+      <h2>竖着切，得到圆柱壳</h2>
+      <p>竖条与旋转轴平行。固定 <var>x</var>，这一条到轴的距离是 <var>x</var>，在 <var>y</var> 方向从 <var>x</var>² 到 <var>x</var>。绕一圈后得到薄壳，把周长、壳高和厚度相乘就得到体积微元。</p>
+      <p class="equation"><var>V</var> = 2π ∫<sub>0</sub><sup>1</sup> <var>x</var>(<var>x</var> − <var>x</var>²) d<var>x</var> = 2π(1/3 − 1/4) = π/6.</p>
+      <h2>横着切，得到圆环</h2>
+      <p>横条与旋转轴垂直。固定 0 ≤ <var>y</var> ≤ 1，先把两个边界写成 <var>x</var> = <var>y</var> 和 <var>x</var> = √<var>y</var>。因为 <var>y</var> ≤ √<var>y</var>，横条的左端离轴近，内半径是 <var>y</var>。右端离轴远，外半径是 √<var>y</var>。圆环面积乘上厚度 d<var>y</var>，再积分。</p>
+      <p class="equation"><var>V</var> = π ∫<sub>0</sub><sup>1</sup> ((√<var>y</var>)² − <var>y</var>²) d<var>y</var> = π(1/2 − 1/3) = π/6.</p>
+      <h2>下次怎么选？</h2>
+      <p>先画旋转轴和一小条区域。垂直切时，读出内、外半径，内半径为零就得到圆盘。平行切时，读出壳的半径和高度。两种办法都能用时，看看哪一种能更直接地写出边界、少分几段。</p>
+      <p>半径始终是到旋转轴的距离。例如绕 <var>x</var> = 2 旋转，区域在轴左侧时，位于 <var>x</var> 的竖条到轴的距离是 2 − <var>x</var>。</p>
+      <footer class="article-footer"><a class="back-link" href="../#archive">返回文章归档</a></footer>
+    </article>
+  </main>
+  <footer class="site-footer wrap">
+    <span>未完稿</span>
+    <a href="https://github.com/Shangjinyuan/Shangjinyuan.github.io">GitHub ↗</a>
+  </footer>
+</body>
+</html>
